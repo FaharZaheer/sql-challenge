@@ -1,0 +1,34 @@
+Departments
+-
+dept_no PK sting 
+dept_name string
+
+dept_emp
+-
+emp_no int PK FK - employees.emp_no
+dept_no string FK >- Departments.dept_no
+
+dept_managers
+-
+dept_no string PK FK >- Departments.dept_no
+emp_no int PK
+
+employees
+-
+emp_no int PK
+emp_title_id string FK >- titles.title_id
+birth_date date
+first_name string
+last_name string
+sex varchar(1)
+hire_date date
+
+salaries
+-
+emp_no int PK FK - employees.emp_no
+salary int
+
+titles
+-
+title_id string PK
+title string
